@@ -1,0 +1,32 @@
+@import "./styles/colors.scss";
+
+body {
+    color: $textColor;
+    font-family: 'Roboto', sans-serif;
+}
+
+// BOOTSTRAP REWRITE
+.btn-primary {
+    border-color: $primaryColor;
+    background-color: $primaryColor;
+    color: $textColor;
+
+    &:hover {
+        background-color: $primaryColorShadow;
+        border-color: $primaryColor;
+        color: $textColor;
+    }
+
+    &:disabled {
+        background-color: $primaryColor;
+        border-color: $primaryColor;
+        color: $textColor;
+    }
+
+    &:focus {
+        background-color: $primaryColor;
+        border-color: $primaryColor;
+        color: $textColor;
+        box-shadow: 0 0 0 0.2rem $primaryColorShadow;
+    }
+}

@@ -1,0 +1,56 @@
+<div class="row mt-3">
+  <div class="order-2 order-md-1 col-md-4 add-dessert-col">
+    <h2>Add Dessert</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmitNewDessert()">
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Name</span>
+        </div>
+        <input type="text" class="form-control" formControlName="name" placeholder="Dessert Name">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Image</span>
+        </div>
+        <input type="text" class="form-control" formControlName="imageUrl" placeholder="Image Url">
+      </div>
+      
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Price</span>
+        </div>
+        <input type="number" min="0" class="form-control" formControlName="price" placeholder="Dessert Price">
+      </div>
+
+      <div class="form-group ingredients-title">
+        <h5>Ingredients: </h5>
+        <a class="add-ingredient-icon" (click)="addIngredient()"><i class="fa fa-plus-square"></i></a>
+      </div>
+
+      <div formArrayName="ingredients">
+        <div class="form-group ingredient-row" *ngFor="let ingredient of getControls(); let i = index" [formGroupName]="i">   
+          <select class="form-control ingredient" formControlName="ingredientId">
+            <option *ngFor="let ingredient of ingredients" [value]="ingredient.id">{{ingredient.name}}</option>
+          </select>
+          <input type="number" min="0" class="form-control amount ml-1" formControlName="amount" placeholder="Amount">
+          <input type="text" class="form-control unit ml-1" formControlName="unit" placeholder="Unit">
+          <a class="remove-ingredient-icon ml-1" (click)="removeIngredient(i)"><i class="fa fa-minus-circle"></i></a>
+        </div>
+      </div>
+
+      <div class="btns-container">
+        <button class="btn btn-danger" type="button" (click)="clearForm()"> Clear </button>
+        <button class="btn btn-primary" type="submit" [disabled]="form.invalid">
+          <span *ngIf="!loadingAdd">Add</span>
+          <div class="spinner-border" role="status" *ngIf="loadingAdd"></div>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="order-1 order-md-2 col-md-8">
+    we
+  </div>
+</div>

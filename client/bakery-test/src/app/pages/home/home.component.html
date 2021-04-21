@@ -1,0 +1,9 @@
+<div class="spinner-border" role="status" *ngIf="loading">
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let dessert of desserts">
+        <app-dessert-box [dessert]="dessert"></app-dessert-box>
+    </div>
+</div>

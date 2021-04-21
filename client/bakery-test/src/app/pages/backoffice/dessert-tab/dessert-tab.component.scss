@@ -1,0 +1,38 @@
+@import "../../../../styles/colors.scss";
+
+.btns-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-dessert-col {
+  max-width: 100%;
+
+  .ingredients-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .add-ingredient-icon {
+      font-size: 25px;
+      cursor: pointer;
+      color: $primaryColor;
+    }
+  }
+
+  .ingredient-row {
+    display: flex;
+
+    .remove-ingredient-icon {
+      flex: 1 1 auto;
+      color: $errorColor;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &:hover { 
+        text-decoration: none;
+      }
+    }
+  }
+}

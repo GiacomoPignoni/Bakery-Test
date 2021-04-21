@@ -1,0 +1,7 @@
+<div class="error-bar" *ngIf="isVisible">
+  <i class="fas fa-exclamation"></i>
+  {{errorText}}
+  <div class="close-icon-container" (click)="onClickCloseIcon()">
+    <i class="fas fa-times"></i>
+  </div>
+</div>

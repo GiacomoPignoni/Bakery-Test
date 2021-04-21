@@ -1,0 +1,26 @@
+<div class="dessert-box">
+    <div class="inner">
+        <div class="front">
+            <img class="dessert-img" [src]="dessert.imageUrl">
+            <div class="info-container">
+                <div class="info-item name">
+                    <label>{{dessert.name}}</label>
+                </div>
+                <div class="info-item price">
+                    <label>{{dessert.price}} <span>€</span></label>
+                </div>
+            </div>
+        </div>
+        <div class="back">
+            <h4>Ingredients</h4>
+            <ul class="ingredients-list">
+                <li class="item" *ngFor="let in of dessert.ingredients">
+                    <span class="font-weight-bold">{{in.name}}</span>
+                    <span>{{in.amount}} {{in.unit}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
