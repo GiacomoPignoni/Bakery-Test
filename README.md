@@ -7,7 +7,8 @@ This a test made for an interview
   * Start the app with the Play button, it can take some seconds, when the Swagger it's opend the server it's ready
   * Open the __client__ folder with a terminal and use `npm install`
   * Launch the client with command `npm start`
-  * There are already in the databse two test users
+  * First call can be take some seconds becuase it needs to generate the db
+  * You need to be logged to see the backoffice page, there are already in the databse two test users
   
   Email  | Password
   ------------- | -------------
