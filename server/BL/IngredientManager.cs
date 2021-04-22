@@ -37,6 +37,13 @@ namespace BL
                 throw new KeyNotFoundException();
             }
 
+            var desserts = dbContext.Desserts.Where(x => x.Ingredients.Where(x => x.Ingredient.Id == ingredient.Id).Count() > 0);
+
+            if(desserts.Count() > 0)
+            {
+                throw new Exception("You can't delete this ingredient beacuse it's used in some desserts");
+            }
+
             dbContext.Ingredients.Remove(ingredient);
             dbContext.SaveChanges();
         }

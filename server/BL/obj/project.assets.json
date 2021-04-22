@@ -1328,25 +1328,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pignogi1\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\giaco\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pignogi1\\Desktop\\bakery-test\\server\\BL\\BL.csproj",
+      "projectUniqueName": "C:\\Users\\giaco\\Desktop\\Bakery-Test\\server\\BL\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "C:\\Users\\pignogi1\\Desktop\\bakery-test\\server\\BL\\BL.csproj",
-      "packagesPath": "C:\\Users\\pignogi1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pignogi1\\Desktop\\bakery-test\\server\\BL\\obj\\",
+      "projectPath": "C:\\Users\\giaco\\Desktop\\Bakery-Test\\server\\BL\\BL.csproj",
+      "packagesPath": "C:\\Users\\giaco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\giaco\\Desktop\\Bakery-Test\\server\\BL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\pignogi1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\giaco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1359,8 +1354,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\pignogi1\\Desktop\\bakery-test\\server\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\pignogi1\\Desktop\\bakery-test\\server\\DAL\\DAL.csproj"
+            "C:\\Users\\giaco\\Desktop\\Bakery-Test\\server\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\giaco\\Desktop\\Bakery-Test\\server\\DAL\\DAL.csproj"
             }
           }
         }
@@ -1398,7 +1393,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

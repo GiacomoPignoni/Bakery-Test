@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { AddIngredientInput, Ingredient } from 'src/app/viewModels/ingredients';
-import { IngredientsMapper } from '../mappers/ingredients-mapper';
-import { GetAllIngredientsOutput } from '../models/ingredients';
+import { IngredientsMapper } from 'src/app/mappers/ingredients-mapper';
+import { GetAllIngredientsOutput } from 'src/app/models/ingredients';
 
 @Injectable()
 export class IngredientsService {

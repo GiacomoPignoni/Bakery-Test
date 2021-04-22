@@ -33,6 +33,6 @@ export class DessertMapper {
                     amount: x.amount
                 };
             })
-        }
+        };
     }
 }

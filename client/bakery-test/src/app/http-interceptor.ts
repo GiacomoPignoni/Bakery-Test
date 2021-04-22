@@ -33,7 +33,7 @@ export class CustomInterceptor implements HttpInterceptor {
                     case 403:
                         return;
                     default:
-                        message = error.message;
+                        message = error.error;
                 }
                 this.msgSvc.showError(message);
                 return throwError(error);

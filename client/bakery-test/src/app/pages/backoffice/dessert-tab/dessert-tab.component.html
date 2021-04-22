@@ -72,7 +72,7 @@
             </td>
             <td><img [src]="dessert.imageUrl" width="50"></td>
             <td><input type="number" class="form-control" formControlName="price"></td>
-            <td>
+            <td class="fit">
               <a class="save-dessert-icon" (click)="saveDessert()" title="Save"><i class="fa fa-check"></i></a>
               <a class="cancel-edit-icon ml-3" (click)="cancelEdit()" title="Cancel"><i class="fa fa-undo"></i></a>
             </td>
@@ -84,7 +84,7 @@
               <td>{{dessert.name}}</td>
               <td><img [src]="dessert.imageUrl" width="50"></td>
               <td>{{dessert.price}}</td>
-              <td>
+              <td class="fit">
                 <a class="delete-dessert-icon" (click)="deleteDessert(dessert)" title="Delete Dessert"><i class="fa fa-minus-circle"></i></a>
                 <a class="edit-dessert-icon ml-3" (click)="editDessert(dessert)" title="Edit Dessert"><i class="fa fa-edit"></i></a>
               </td>

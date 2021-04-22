@@ -30,3 +30,14 @@ body {
         box-shadow: 0 0 0 0.2rem $primaryColorShadow;
     }
 }
+
+.table {
+    td, th{
+        vertical-align: middle;
+    }
+
+    td.fit {
+        white-space: nowrap;
+        width: 1%;
+    }
+}

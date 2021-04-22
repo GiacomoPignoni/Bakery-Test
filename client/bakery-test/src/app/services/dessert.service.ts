@@ -5,7 +5,7 @@ import { DessertOnSale } from 'src/app/viewModels/dessert-on-sale';
 import { AddDessertInput, GetAllDessertsOutput, GetAllOnSaleDessertsOutput, PutDessertOnSaleInput, UpdateDessertInput } from 'src/app/models/dessert';
 import { map, tap } from 'rxjs/operators';
 import { DessertMapper } from 'src/app/mappers/desserts-mapper';
-import { Dessert } from '../viewModels/dessert';
+import { Dessert } from 'src/app/viewModels/dessert';
 
 @Injectable()
 export class DessertService {

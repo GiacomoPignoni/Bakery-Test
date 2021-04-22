@@ -49,5 +49,4 @@ export class OnsaleTabComponent implements OnInit {
       this.loading = false;
     });
   }
-
 }

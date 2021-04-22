@@ -32,7 +32,7 @@
         <tr *ngFor="let in of ingredients">
           <th>{{in.id}}</th>
           <td>{{in.name}}</td>
-          <td><a class="delete-ingredient-icon" (click)="delete(in)" title="Delete Ingredient"><i class="fa fa-minus-circle"></i></a></td>
+          <td class="fit"><a class="delete-ingredient-icon" (click)="delete(in)" title="Delete Ingredient"><i class="fa fa-minus-circle"></i></a></td>
         </tr>
       </tbody>
     </table>

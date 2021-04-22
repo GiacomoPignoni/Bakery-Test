@@ -11,6 +11,7 @@ export class BackofficeGuard implements CanLoad {
     ) {
         //
     }
+
     canLoad(route: Route, segments: UrlSegment[]): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
         if (this.userSvc.isLogged) {
             return true;
