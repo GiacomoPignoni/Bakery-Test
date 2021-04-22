@@ -20,19 +20,38 @@
     }
   }
 
-  .ingredient-row {
-    display: flex;
-
-    .remove-ingredient-icon {
-      flex: 1 1 auto;
-      color: $errorColor;
-      cursor: pointer;
+  .ingredients-list {
+    overflow: auto;
+    max-height: 300px;
+    .ingredient-row {
       display: flex;
-      align-items: center;
-
-      &:hover { 
-        text-decoration: none;
+  
+      .remove-ingredient-icon {
+        flex: 1 1 auto;
+        color: $errorColor;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+  
+        &:hover { 
+          text-decoration: none;
+        }
       }
     }
   }
+}
+
+.delete-dessert-icon {
+  color: $errorColor;
+  cursor: pointer;
+}
+
+.save-dessert-icon {
+  color: green;
+  cursor: pointer;
+}
+
+.edit-dessert-icon, .cancel-edit-icon {
+  color: $primaryColor;
+  cursor: pointer;
 }

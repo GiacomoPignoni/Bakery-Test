@@ -56,7 +56,10 @@ namespace BL
                 dbContext.DessertIngredients.Remove(ingredient);
             }
 
+            var onSaleDesserts = dbContext.OnSaleDesserts.Where(x => x.Dessert.Id == dessert.Id);
+            dbContext.OnSaleDesserts.RemoveRange(onSaleDesserts);
             dbContext.Desserts.Remove(dessert);
+
             dbContext.SaveChanges();
         }
 

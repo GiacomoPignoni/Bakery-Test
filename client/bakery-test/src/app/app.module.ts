@@ -11,9 +11,15 @@ import { BackofficeGuard } from 'src/app/pages/backoffice/backoffice.guard';
 import { MessageService } from './services/message.service';
 import { IngredientsService } from './services/ingredients.service';
 
-export function initialize(ingredientsSvc: IngredientsService) {
+export function initialize(ingredientsSvc: IngredientsService, userSvc: UserService) {
   return async (): Promise<any> => {
-    await ingredientsSvc.loadIngredients();
+    try {
+      if (userSvc.isLogged) {
+        await ingredientsSvc.loadIngredients();
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 }
 
@@ -33,7 +39,7 @@ export function initialize(ingredientsSvc: IngredientsService) {
     BackofficeGuard,
     MessageService,
     IngredientsService,
-    { provide: APP_INITIALIZER, useFactory: initialize, deps: [IngredientsService], multi: true},
+    { provide: APP_INITIALIZER, useFactory: initialize, deps: [IngredientsService, UserService], multi: true},
     {
       provide: HTTP_INTERCEPTORS,
       useClass: CustomInterceptor,

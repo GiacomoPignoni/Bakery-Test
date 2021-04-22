@@ -11,7 +11,7 @@ namespace BL.DTO.Dessert
     {
         public string Name { get; set; }
         public string ImageUrl { get; set; }
-        public float Price { get; set; }
+        public double Price { get; set; }
         public AddDessertIngredient[] Ingredients { get; set; }
 
         public DAL.Models.Dessert ToDbModel(ICollection<DAL.Models.Ingredient> ingredients)

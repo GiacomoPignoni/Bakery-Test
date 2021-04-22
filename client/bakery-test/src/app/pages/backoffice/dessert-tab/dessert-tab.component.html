@@ -26,23 +26,24 @@
 
       <div class="form-group ingredients-title">
         <h5>Ingredients: </h5>
-        <a class="add-ingredient-icon" (click)="addIngredient()"><i class="fa fa-plus-square"></i></a>
+        <a class="add-ingredient-icon" (click)="addIngredient()" title="Add Ingredient"><i class="fa fa-plus-square"></i></a>
       </div>
 
-      <div formArrayName="ingredients">
+      <div class="ingredients-list" formArrayName="ingredients">
         <div class="form-group ingredient-row" *ngFor="let ingredient of getControls(); let i = index" [formGroupName]="i">   
           <select class="form-control ingredient" formControlName="ingredientId">
+            <option [ngValue]="null" [disabled]="true" >Ingredient</option>
             <option *ngFor="let ingredient of ingredients" [value]="ingredient.id">{{ingredient.name}}</option>
           </select>
           <input type="number" min="0" class="form-control amount ml-1" formControlName="amount" placeholder="Amount">
           <input type="text" class="form-control unit ml-1" formControlName="unit" placeholder="Unit">
-          <a class="remove-ingredient-icon ml-1" (click)="removeIngredient(i)"><i class="fa fa-minus-circle"></i></a>
+          <a class="remove-ingredient-icon ml-1" (click)="removeIngredient(i)" title="Remove Ingredient"><i class="fa fa-minus-circle"></i></a>
         </div>
       </div>
 
       <div class="btns-container">
-        <button class="btn btn-danger" type="button" (click)="clearForm()"> Clear </button>
-        <button class="btn btn-primary" type="submit" [disabled]="form.invalid">
+        <button class="btn btn-danger" type="button" (click)="clearForm()" title="Clear Form"> Clear </button>
+        <button class="btn btn-primary" type="submit" [disabled]="form.invalid" title="Add Dessert">
           <span *ngIf="!loadingAdd">Add</span>
           <div class="spinner-border" role="status" *ngIf="loadingAdd"></div>
         </button>
@@ -51,6 +52,46 @@
   </div>
 
   <div class="order-1 order-md-2 col-md-8">
-    we
+    <h2>Desserts</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let dessert of desserts"r>
+          <tr *ngIf="editForm && editForm.value.id === dessert.id; else normalView" [formGroup]="editForm">
+            <th>{{dessert.id}}</th>
+            <td>
+              <input type="text" class="form-control" formControlName="name">
+            </td>
+            <td><img [src]="dessert.imageUrl" width="50"></td>
+            <td><input type="number" class="form-control" formControlName="price"></td>
+            <td>
+              <a class="save-dessert-icon" (click)="saveDessert()" title="Save"><i class="fa fa-check"></i></a>
+              <a class="cancel-edit-icon ml-3" (click)="cancelEdit()" title="Cancel"><i class="fa fa-undo"></i></a>
+            </td>
+          </tr>
+          
+          <ng-template #normalView>
+            <tr>
+              <th>{{dessert.id}}</th>
+              <td>{{dessert.name}}</td>
+              <td><img [src]="dessert.imageUrl" width="50"></td>
+              <td>{{dessert.price}}</td>
+              <td>
+                <a class="delete-dessert-icon" (click)="deleteDessert(dessert)" title="Delete Dessert"><i class="fa fa-minus-circle"></i></a>
+                <a class="edit-dessert-icon ml-3" (click)="editDessert(dessert)" title="Edit Dessert"><i class="fa fa-edit"></i></a>
+              </td>
+            </tr>
+          </ng-template>
+        </ng-container>
+      </tbody>
+    </table>
   </div>
 </div>

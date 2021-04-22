@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giaco\\Desktop\\BakeryTest\\server\\DAL\\DAL.csproj": {}
+    "C:\\Users\\pignogi1\\Desktop\\bakery-test\\server\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\giaco\\Desktop\\BakeryTest\\server\\DAL\\DAL.csproj": {
+    "C:\\Users\\pignogi1\\Desktop\\bakery-test\\server\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giaco\\Desktop\\BakeryTest\\server\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\pignogi1\\Desktop\\bakery-test\\server\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\giaco\\Desktop\\BakeryTest\\server\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\giaco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giaco\\Desktop\\BakeryTest\\server\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\pignogi1\\Desktop\\bakery-test\\server\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\pignogi1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pignogi1\\Desktop\\bakery-test\\server\\DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\giaco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\pignogi1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -60,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

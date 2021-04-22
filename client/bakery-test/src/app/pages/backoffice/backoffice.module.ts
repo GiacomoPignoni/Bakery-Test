@@ -5,12 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DessertTabComponent } from './dessert-tab/dessert-tab.component';
 import { IngredientsTabComponent } from './ingredients-tab/ingredients-tab.component';
+import { OnsaleTabComponent } from './onsale-tab/onsale-tab.component';
 
 const ROUTES: Routes = [
   { path: "", component: BackofficeComponent, children: [
       { path: "", pathMatch: "full", redirectTo: "dessert" },
       { path: "dessert", component: DessertTabComponent },
-      { path: "ingredients", component: IngredientsTabComponent }
+      { path: "ingredients", component: IngredientsTabComponent },
+      { path: "on-sale", component: OnsaleTabComponent }
     ]
   }
 ];
@@ -20,6 +22,7 @@ const ROUTES: Routes = [
     BackofficeComponent,
     DessertTabComponent,
     IngredientsTabComponent,
+    OnsaleTabComponent,
   ],
   imports: [
     CommonModule,

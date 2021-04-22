@@ -1,1 +1,40 @@
-<p>ingredients-tab works!</p>
+<div class="row">
+    <div class="col-12">
+        <h2>Ingredients</h2>
+    </div>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="row mb-3 mt-2">
+        <div class="col-10">
+            <input type="text" class="form-control" formControlName="name" placeholder="Ingredient Name">
+        </div>
+        <div class="col-2 text-center">
+            <button class="btn btn-primary" type="submit" [disabled]="form.invalid" title="Add Ingredient">
+                <span *ngIf="!loading">Add</span>
+                <div class="spinner-border" role="status" *ngIf="loading"></div>
+            </button>
+        </div>
+    </div>
+</form>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let in of ingredients">
+          <th>{{in.id}}</th>
+          <td>{{in.name}}</td>
+          <td><a class="delete-ingredient-icon" (click)="delete(in)" title="Delete Ingredient"><i class="fa fa-minus-circle"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</div>

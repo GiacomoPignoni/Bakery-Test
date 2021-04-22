@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-12">
+        <h2>On Sale Desserts</h2>
+    </div>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="row mb-3 mt-2">
+        <div class="col-10 d-flex">
+            <select class="form-control mr-4" formControlName="dessertId">
+                <option [ngValue]="null" [disabled]="true" >Dessert</option>
+                <option *ngFor="let dessert of desserts" [value]="dessert.id">{{dessert.name}}</option>
+              </select>
+            <input type="number" class="form-control" formControlName="quantity" placeholder="Quantity">
+        </div>
+        <div class="col-2 text-center">
+            <button class="btn btn-primary" type="submit" [disabled]="form.invalid" title="Add Dessert on Sale">
+                <span *ngIf="!loading">Add</span>
+                <div class="spinner-border" role="status" *ngIf="loading"></div>
+            </button>
+        </div>
+    </div>
+</form>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>On Sale Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dessert of onSaleDesserts">
+          <th>{{dessert.id}}</th>
+          <td>{{dessert.name}}</td>
+          <td>{{dessert.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</div>

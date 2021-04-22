@@ -8,8 +8,19 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    .loading-img {
+      width: 200px;
+      position: absolute;
+      left: calc(50% - 100px);
+      top: calc(50% - 100px);
+    }
+  </style>
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <img class="loading-img" src="assets/icon.png">
+  </app-root>
 </body>
 </html>
